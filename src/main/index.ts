@@ -1,8 +1,8 @@
 import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer } from '@electron-toolkit/utils'
-import icon from '../../resources/icon.png?asset'
-import { registerRoute } from '../lib/electron-router-dom' // ✅ Mantido aqui
+import { registerRoute } from '../lib/electron-router-dom'
+
 
 function createMainWindow(): BrowserWindow {
   const mainWindow = new BrowserWindow({
@@ -10,12 +10,13 @@ function createMainWindow(): BrowserWindow {
     height: 670,
     show: false,
     autoHideMenuBar: true,
-    ...(process.platform === 'linux' ? { icon } : {}),
+    icon: join(__dirname, '../../resources/logografico.png'),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false
     }
   })
+  
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()

@@ -5,7 +5,7 @@ function About(): React.JSX.Element {
     return (
         <div>
             <h1>pagina About</h1>
-            <button onClick={() => navigate(-1)}>🔙 Voltar</button>
+            <button onClick={() => navigate(-1)}>Voltar</button>
         </div>
     )
 }

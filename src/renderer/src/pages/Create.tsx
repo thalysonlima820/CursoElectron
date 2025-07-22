@@ -6,7 +6,7 @@ function Create(): React.JSX.Element {
         <div>
             <h1>pagina Create</h1>
          
-      <button onClick={() => navigate(-1)}>🔙 Voltar</button>
+      <button onClick={() => navigate(-1)}>Voltar</button>
         </div>
     )
 }

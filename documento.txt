@@ -1,1 +1,5 @@
 npm install electron-router-dom
+
+npm install @radix-ui/react-collapsible
+
+npm install phosphor-react clsx
