@@ -14,7 +14,7 @@ export function Layout() {
             onOpenChange={setIsOpen}
             className="layout"
         >
-            {isOpen && <Sidebar />}
+            {isOpen && <Sidebar toggleSidebar={() => setIsOpen(!isOpen)}  />}
             
             <div className="main">
                 <Header 
