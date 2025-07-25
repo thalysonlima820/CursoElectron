@@ -7,12 +7,22 @@ function Home(): React.JSX.Element {
     window.api.getUser().then((name: string) => {
       setUser(name)
     })
-  })
+  },[])
+
+
+  async function handkrAdd(){
+    const respose = await window.api.fetchUser();
+    console.log(respose)
+  }
 
   return (
     <div>
       <h1>Página Home</h1>
       <h2>User: {user}</h2>
+      <br />
+      <button onClick={handkrAdd}>
+        TESTAR
+      </button>
     </div>
   )
 }

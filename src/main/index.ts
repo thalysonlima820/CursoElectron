@@ -4,6 +4,8 @@ import { electronApp, optimizer } from '@electron-toolkit/utils'
 import { registerRoute } from '../lib/electron-router-dom'
 import {createTray} from './tray'
 
+import './ipc'
+
 function createMainWindow(): BrowserWindow {
   const mainWindow = new BrowserWindow({
     width: 900,
@@ -93,3 +95,5 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
+
+export { createDetailWindow }

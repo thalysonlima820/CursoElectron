@@ -6,6 +6,8 @@ declare global {
     api: {
       getUser: () => Promise<string>
       openDetailWindow: () => void
+      onNewCustomer: (callback: () => void) => () => void
+      fetchUser: () => void
     }
   }
 }
