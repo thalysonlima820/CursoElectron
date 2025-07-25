@@ -2,7 +2,7 @@ import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer } from '@electron-toolkit/utils'
 import { registerRoute } from '../lib/electron-router-dom'
-
+import {createTray} from './tray'
 
 function createMainWindow(): BrowserWindow {
   const mainWindow = new BrowserWindow({
@@ -16,6 +16,9 @@ function createMainWindow(): BrowserWindow {
       sandbox: false
     }
   })
+
+  //chamar tray
+  createTray(mainWindow)
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
