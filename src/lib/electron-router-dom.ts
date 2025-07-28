@@ -7,3 +7,4 @@ export const { Router, registerRoute } = createElectronRouter({
     ids: ['main', 'detail']
   }
 })
+
