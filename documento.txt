@@ -7,7 +7,6 @@ npm install phosphor-react clsx
 
 npm install vite-plugin-static-copy
 
-
 npm install pouchdb pouchdb-browser 
 
 npm intall @types/pouchdb @types/pouchdb-browser
